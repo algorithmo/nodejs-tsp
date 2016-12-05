@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-tsp",
+  "version": "1.0.0",
+  "description": "create a path of client location list by the TSP ang google maps API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/algorithmo/nodejs-tcp.git"
+  },
+  "author": "Moti Gadian",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "^0.3.1"
+  }
+}
