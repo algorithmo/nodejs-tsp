@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Graph</title>
+    <script src="../node_modules/vis/dist/vis.min.js"></script>
+    <link href="../node_modules/vis/dist/vis.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="icon" href="../code-market.png">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+
+</head>
+<body id='cover'>
+   <h1 class="display-3">Your result: </h1>
+  <div class="row" >
+        <div class="col-md-offset-2 col-md-8 text-center" style="top:30px;">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><h2> Path graph</h2></div>
+                      <div class="panel-body">
+                        <p><h4>You can zoom in or out by mouse wheel. </h4></p>
+                        <p><h4>You can click on any node to move it.</h4></p>
+                          <div  class="container " id="mynetwork"></div>
+                      </div>
+              </div>
+        </div>
+  </div>
+<script src="../app/tsp.js"></script>
+</body>
+</html>

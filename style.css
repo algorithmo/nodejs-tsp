@@ -1,0 +1,25 @@
+
+
+#cover{
+    background: #222 url('views/skyscrapers.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+
+.display-3{
+  font-size: 6rem;
+}
+
+form , .panel-body{
+  color:black;
+}
+
+#mynetwork {
+    width: 600px;
+    height: 280px;
+    border: 1px solid lightgray;
+}
