@@ -86,8 +86,5 @@ function GetData(res,originsArr , destArr){
 
 
 
-/*var test = GetData([],[]);
-console.log(test);*/
-
 
 exports.GetData = GetData;
