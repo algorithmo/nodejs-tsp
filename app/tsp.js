@@ -1,8 +1,11 @@
 
+const google = require('./googleAPI');
+const vis = require('vis');
 
 
-function TSP(){
-
+function TSP(origin,addrs){
+    google.GetData(origin,addrs);
+    console.log(google.result);
       // create an array with nodes
       var nodes = new vis.DataSet([
           {id: 1, label: 'Node 1'},
@@ -36,4 +39,4 @@ function TSP(){
 
   }
 
-  TSP();
+  TSP(['isreal'],['ashkelon', 'givat yoav 3']);

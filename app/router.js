@@ -1,18 +1,23 @@
 
 const fs     = require('fs');
-const google = require('./googleAPI').GetData;
+const google = require('./googleAPI');
+const pug = require('pug');
 
 
 function home(res,data)
 {
-      fs.readFile('index.html', (err, html) => {
+      /*fs.readFile('views/index.html', (err, html) => {
       if (err) {
           throw err;
       }
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.write(html);
       res.end();
-    });
+    });*/
+   var html = pug.renderFile('views/index.pug');
+   res.writeHead(200, {'Content-Type': 'text/html'});
+   res.write(html);
+   res.end();
 
 }
 
@@ -24,21 +29,8 @@ function getdata(res,data)
 
   ///
 
-  google(res,origins ,dest)
-
-  
-
-  /*var info = google(origins ,dest);
-  console.log(info);
-  if(info){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write(google(origins ,dest));
-    res.end();
-  }else{
-    res.writeHead(404, {'Content-Type': 'text/plain'});
-    res.write('Error: Content NOT retrive ');
-    res.end();
-  }*/
+var data = google.GetData(res,origins ,dest);
+  console.log("ROUTER\n"+data);
 
 
 }

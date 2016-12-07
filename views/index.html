@@ -5,7 +5,7 @@
     <title>Home</title>
     <link rel="icon" href="../code-market.png">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body id="cover">
 
@@ -25,16 +25,19 @@
                                       <div class='form-group'>
                                         <input class="form-control" id="origin" type='text' name='origin' placeholder='Add origin (i.e US)'  >
                                       </div>
+                                      <div id='inputs'>
                                       <div class='form-group'>
                                         <input  type='text' name='addr' placeholder='Add address'><button type='button' name='button-plus' onclick='addInput()'>
                                           <span class='glyphicon glyphicon-plus'></span>
                                         </button>
                                       </div>
+                                      </div>
                                       <!--<button class="btn btn-primary" type="button" name="buttonsubmit" >Send</button>-->
+                                      <div class='form-group'>
+                                          <input type="submit" class="btn btn-primary btn-lg">
+                                      </div>
                                     </form>
-                                    <div >
-                                        <input type="submit" class="btn btn-primary btn-lg">
-                                    </div>
+
                               </div>
                       </div>
                 </div>
@@ -52,7 +55,7 @@
                           <span class='glyphicon glyphicon-plus'></span> \
                        </button> \
                    </div>"
-    document.getElementById('mainform').innerHTML += field ;
+    document.getElementById('inputs').innerHTML += field ;
 
   }
   </script>

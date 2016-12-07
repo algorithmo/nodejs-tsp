@@ -1,0 +1,46 @@
+extends ../node_modules/pug-bootstrap/_bootstrap
+block body
+	style
+		include style.css
+  
+	h1.display-3 Hello and wellcome to our site
+	p
+	h4
+		| In this site we will clculate for you the best solution for your meeting.
+	p
+	p
+	h4
+		| Just fill the fields an hit 'send' bottun, and the magic will strat.
+	p
+	p
+	h4
+		| Aftet few seconds you will see our soggestion that our inteligence algorithm  has made.
+	p
+	.row
+		.col-md-offset-2.col-md-8.text-center(style='top:30px;')
+			.panel.panel-primary
+				.panel-heading
+					h2 set your addresses
+				.panel-body
+					form#mainform.form-horizontal(action='/getdata', method='post')
+						.form-group
+							input#origin.form-control(type='text', name='origin', placeholder='Add origin (i.e US)')
+						#inputs
+							.form-group
+								input(type='text', name='addr', placeholder='Add address')
+								button(type='button', name='button-plus', onclick='addInput()')
+									span.glyphicon.glyphicon-plus
+						// <button class="btn btn-primary" type="button" name="buttonsubmit" >Send</button>
+						.form-group
+							input.btn.btn-primary.btn-lg(type='submit')
+append scripts
+	script.
+		function addInput(){
+		var field = "  <div class='form-group'> \
+										<input  type='text' name='addr' placeholder='add address'>   \
+											<button type='button' name='button-plus' onclick='addInput()'> \
+												<span class='glyphicon glyphicon-plus'></span> \
+											</button> \
+										</div>"
+		document.getElementById('inputs').innerHTML += field ;
+		}
