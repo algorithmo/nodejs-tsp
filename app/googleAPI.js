@@ -76,11 +76,6 @@ function GetData(res,originsArr , destArr){
                         writeMyData(fd);
                       //write('maps-data.json',txt);
                     });*/
-
-
-
-
-
              //expectOK(response);*/
 
           }
